@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToolbarItem xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:TestIconImageSource.Common;assembly=TestIconImageSource"
+             IconImageSource="{c:UISvgImageResource ResourceName=Resources.about-48x48.svg, Height=200, Width=200}" 
+             Text="StreamSrc"
+             x:Class="TestIconImageSource.ToolbarItems.SettingsToolbarItem2">
+</ToolbarItem>

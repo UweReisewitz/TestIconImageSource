@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:c="clr-namespace:TestIconImageSource.Common;assembly=TestIconImageSource"
+             xmlns:toolbar="clr-namespace:TestIconImageSource.ToolbarItems;assembly=TestIconImageSource"
+             x:Class="TestIconImageSource.MainPage"
+             NavigationPage.HasBackButton="False"
+             Title="TestIconImageSource">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Image">
+                <Setter Property="BackgroundColor" Value="#2196F3" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <toolbar:SettingsToolbarItem />
+        <toolbar:SettingsToolbarItem2 />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <Grid>
+            <StackLayout>
+                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                    <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                </Frame>
+                <Button Text="Button with FileSource" ImageSource="ToolbarSettings.png"/>
+                <Button Text="Button with ImageResourceSource" ImageSource="{c:UIImageResource ResourceName=Resources.ToolbarSettings.png}"/>
+                <Button Text="Button with StreamSource" ImageSource="{c:UISvgImageResource ResourceName=Resources.MsgBoxQuestion-48x48.svg, Width=200, Height=200}"/>
+                <Label Text="Image below with FileSource" FontSize="Medium"/>
+                <Image Source="MsgBoxExclamation.png"/>
+                <Label Text="Image below with StreamSource" FontSize="Medium"/>
+                <Image Source="{c:UISvgImageResource ResourceName=Resources.about-48x48.svg, Height=200, Width=200}"/>
+                <Image Source="{c:UISvgImageResource ResourceName=Resources.Liste-150x150.svg, Height=200, Width=200}"/>
+                <Image Source="{c:UISvgImageResource ResourceName=Resources.MsgBoxInformation-48x48.svg, Height=200, Width=200}"/>
+                <Image Source="{c:UISvgImageResource ResourceName=Resources.ToolbarSettings-48x48.svg, Height=200, Width=200}"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
